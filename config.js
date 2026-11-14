@@ -1,13 +1,13 @@
 
 export const CONFIG = {
-  CLIENT_ID: "BHANDEBHAI",
-  PIXEL_ID: "620855457320541",
-  BACKUP_LINK: "https://t.me/+NkYxqHOWIawwZWJk",
+  CLIENT_ID: "SIDBHAI6",
+  PIXEL_ID: "1664589175412143",
+  BACKUP_LINK: "https://t.me/+k6ZJUA0urKo1MGM1",
   HELPER_URL: "https://app.kapitrack.site",
 
-  CHANNEL_NAME: "BHANDE BHAI",
+  CHANNEL_NAME: "SIDDHARTH BHAI",
   CHANNEL_TAGLINE: "",
-  AVATAR_IMAGE_URL: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiyWNGfjeusSWIJdLMI03o69gzFacu0CJCUlB1YU4o14mRxhwj17BMuwJeAE-OcpDkwzs09ZaaqJn5aq2gfMNGwVXGSY1FRIAgbC7UuG-r3FEDXnuA8r7YzauiXOpGb0p6syAgal7MeFxXXpzXPSLVkzUAxtOOGGbkjrXoXCc3Tg9g0VjAdRnQgqzmdstFL/s320/avatar.jpg",   // center image: paste your Blogger image URL here
+  AVATAR_IMAGE_URL: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgLHRWnX-e464umuMJvsiBYN3bsbbhonsULfH5za8GKILjSjZWNrtQfnx-zWcpCmM5tF2Z88va1r_VHhG3s_RxCyg4ojabGLPmXi-B0YjltkX1AVfO2zYf6CZqwxIDtK4rbVCHyt3vZuVvU2ILVy5L6AS5cRbTWrIeKBRiHrey0kllRvfOu3kzOHol1C0wb/s320/6325632717386618784_120.jpg",   // center image: paste your Blogger image URL here
   FOOTER_ICON_URL: "avatar.jpg",  
   FAVICON_URL: "avatar.jpg",       
   JOIN_BUTTON_TEXT: "Join Now",
