@@ -1,0 +1,54 @@
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--p1:#a66cff;--p2:#5a2fd6;--ring:#8b5cf6}
+html,body{height:100%}
+body{
+  min-height:100dvh;color:#fff;background:#0b0914;
+  font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden;
+  background-image:
+    linear-gradient(rgba(139,92,246,.06) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(139,92,246,.06) 1px,transparent 1px),
+    radial-gradient(120% 70% at 50% 0%,#17102b 0%,#0b0914 60%);
+  background-size:38px 38px,38px 38px,100% 100%;
+}
+.bg{position:fixed;inset:0;pointer-events:none;overflow:hidden}
+.arc{position:absolute;border-radius:50%;border:2px solid rgba(139,92,246,.75);
+  background:radial-gradient(circle at 50% 40%,rgba(110,60,220,.38),rgba(60,30,120,.12) 60%,transparent 70%)}
+.a1{width:380px;height:380px;left:-190px;top:-230px}
+.a2{width:440px;height:440px;right:-170px;bottom:-250px;border-color:rgba(139,92,246,.7)}
+.dots{position:absolute;left:0;top:0;width:3px;height:3px;border-radius:50%;background:transparent;
+  box-shadow:34px 635px 2px 3px #8b5cf6,300px 648px 2px 2px #a66cff,200px 713px 2px 2px #7c4de8,
+  356px 679px 2px 3px #a66cff,4px 400px 1px 1px #6d4ad0,150px 780px 2px 1px #5a2fd6;opacity:.9}
+main{position:relative;min-height:100dvh;display:flex;flex-direction:column;align-items:center;justify-content:center;
+  gap:22px;padding:max(20px,env(safe-area-inset-top)) 20px max(20px,env(safe-area-inset-bottom))}
+.card{width:100%;max-width:370px;padding:30px 24px 24px;border-radius:24px;text-align:center;
+  background:linear-gradient(180deg,rgba(255,255,255,.055),rgba(255,255,255,.02));
+  border:1px solid rgba(255,255,255,.12);
+  box-shadow:0 20px 60px rgba(0,0,0,.45),inset 0 1px 0 rgba(255,255,255,.06);
+  backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);animation:rise .6s ease both}
+.avatar{position:relative;width:132px;height:132px;margin:0 auto 18px}
+.avatar::before{content:"";position:absolute;inset:-14px;border-radius:50%;border:2px dashed rgba(139,92,246,.7);animation:spin 24s linear infinite}
+.avatar img{position:relative;width:100%;height:100%;border-radius:50%;object-fit:cover;display:block;
+  border:3px solid var(--ring);box-shadow:0 0 0 4px rgba(139,92,246,.18),0 0 34px rgba(139,92,246,.65);background:#05040a}
+h1{font-size:clamp(25px,7.4vw,30px);font-weight:800;letter-spacing:.04em;text-transform:uppercase;line-height:1.15;margin-bottom:12px;word-break:break-word}
+.tag{display:flex;align-items:center;gap:10px;justify-content:center;margin-bottom:22px;
+  font-size:11.5px;font-weight:600;letter-spacing:.2em;color:rgba(255,255,255,.72);text-transform:uppercase}
+.tag::before,.tag::after{content:"";height:1px;width:26px;background:#5b46d6;flex:none}
+.btn{width:100%;display:flex;align-items:center;justify-content:center;gap:10px;height:58px;border:0;border-radius:999px;cursor:pointer;
+  font-family:inherit;font-weight:700;font-size:18px;line-height:1;color:#fff;
+  background:linear-gradient(100deg,var(--p1),var(--p2));
+  box-shadow:0 10px 34px rgba(122,70,240,.55),inset 0 1px 0 rgba(255,255,255,.28);
+  transition:transform .15s ease,filter .15s ease;-webkit-tap-highlight-color:transparent;animation:glow 3s ease-in-out infinite}
+.btn:active{transform:scale(.98)}
+.btn[disabled]{filter:saturate(.8) brightness(.95);cursor:progress}
+.btn svg{width:22px;height:22px;flex:none}
+.foot{display:inline-flex;align-items:center;gap:9px;padding:7px 14px 7px 8px;border-radius:999px;font-size:13px;color:rgba(255,255,255,.72);
+  background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12)}
+.foot img{width:22px;height:22px;border-radius:50%;object-fit:cover}
+.foot a{color:#fff;font-weight:700;text-decoration:none}
+.foot a:hover{text-decoration:underline}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+@keyframes glow{0%,100%{box-shadow:0 10px 34px rgba(122,70,240,.5),inset 0 1px 0 rgba(255,255,255,.28)}50%{box-shadow:0 12px 44px rgba(150,95,255,.75),inset 0 1px 0 rgba(255,255,255,.28)}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important}}
+@media (max-height:640px){main{gap:14px}.card{padding:20px 20px 18px}.avatar{width:104px;height:104px;margin-bottom:14px}.tag{margin-bottom:16px}.btn{height:52px}}
